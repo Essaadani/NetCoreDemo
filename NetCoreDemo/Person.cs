@@ -16,29 +16,19 @@ namespace NetCoreDemo
             Address = address;
             Age = age;
         }
+
+        public Person()
+        {
+
+        }
         public void Speak()
         {
             Console.WriteLine("I Speak...");
         }
 
-        public void Work()
+        public virtual void Work()
         {
             Console.WriteLine("I Work...");
-        }
-    }
-
-    class Programmer : Person
-    {
-        public double Salary { get; set; }
-
-        public Programmer(string name, string address, byte age, double salary)
-            : base(name, address, age)
-        {
-            this.Salary = salary;
-        }
-        public void UseProgrammingLanguage(string language)
-        {
-            Console.WriteLine("I program with : " + language);
         }
     }
 }

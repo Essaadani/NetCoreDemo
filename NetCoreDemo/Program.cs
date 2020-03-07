@@ -8,32 +8,19 @@ namespace NetCoreDemo
         static Computer myComputer = new Computer();
         static void Main(string[] args)
         {
-            myComputer.Brand = "Compaq";
-            myComputer.Color = "Silver";
-            myComputer.IsNew = true;
-            myComputer.price = 45.50;
-            myComputer.manufactureDate = new DateTime(2019, 02, 15);
+            Person person = new Person();
 
-            int number = myComputer.ProcessData();
+            Programmer programmer = new Programmer();
 
-            WriteLine(myComputer.Brand);
-            myComputer.Run();
+            person.Work(); // virtual
 
-            Computer firstComputer = new Computer();
-            WriteLine(firstComputer.Brand);
+            programmer.Work(); // override
 
-            Computer secondComputer = new Computer("HP", 500.00, new DateTime(2019, 02, 14), "Gray", true);
+            person.Speak();
+            programmer.Speak();
+            // Overriding
 
-            WriteLine($"Brand = {secondComputer.Brand}" +
-                        $"\nPrice={secondComputer.price}" +
-                        $"\nDate={secondComputer.manufactureDate}" +
-                        $"\nColor={secondComputer.Color}");
-
-            Person person = new Person("Ahmed","Egypt",32);
-
-            Programmer programmer = new Programmer("Khalid", "Morocco", 29, 3560);
-
-            programmer.UseProgrammingLanguage("Python");
+            // Hiding - Shadowing
         }
     }
     
