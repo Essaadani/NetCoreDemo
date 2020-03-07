@@ -14,6 +14,24 @@ namespace NetCoreDemo
         //Auto Properties
         public bool isNew { get; set; }
 
+        //Constructor
+        public Computer()
+        {
+            this.Brand = "Undefined";
+            this.price = 0.0;
+            this.ManufactureDate = DateTime.Now;
+            this.Color = "Undefined";
+            this.isNew = false;
+        }
+
+        public Computer(string _brand, double _price, DateTime _manufactureDate, string _color, bool _isNew)
+        {
+            Brand = _brand;
+            price = _price;
+            ManufactureDate = _manufactureDate;
+            Color = _color;
+            isNew = _isNew;
+        }
         //Access Modifiers: private, public, internal, protected
 
         //Full Properties
@@ -29,6 +47,15 @@ namespace NetCoreDemo
             }
         }
 
+        // Methods
+        public void Run()
+        {
+            Console.WriteLine("The computer is running...");
+        }
 
+        public int ProcessData()
+        {
+            return 1;
+        }
     }
 }
