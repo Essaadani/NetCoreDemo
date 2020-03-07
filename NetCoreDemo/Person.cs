@@ -31,13 +31,11 @@ namespace NetCoreDemo
     {
         public double Salary { get; set; }
 
-        public Programmer(string name, string address, byte age, double salary) : base(name, address, age)
+        public Programmer(string name, string address, byte age, double salary)
+            : base(name, address, age)
         {
             this.Salary = salary;
         }
-
-
-
         public void UseProgrammingLanguage(string language)
         {
             Console.WriteLine("I program with : " + language);

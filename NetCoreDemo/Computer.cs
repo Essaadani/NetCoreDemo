@@ -7,43 +7,43 @@ namespace NetCoreDemo
     class Computer
     {
         //Properties
-        private string Brand;
+        private string brand;
         public double price;
-        public DateTime ManufactureDate;
+        public DateTime manufactureDate;
         public string Color { get; set; }
         //Auto Properties
-        public bool isNew { get; set; }
+        public bool IsNew { get; set; }
 
         //Constructor
         public Computer()
         {
-            this.Brand = "Undefined";
+            this.brand = "Undefined";
             this.price = 0.0;
-            this.ManufactureDate = DateTime.Now;
+            this.manufactureDate = DateTime.Now;
             this.Color = "Undefined";
-            this.isNew = false;
+            this.IsNew = false;
         }
 
         public Computer(string _brand, double _price, DateTime _manufactureDate, string _color, bool _isNew)
         {
-            Brand = _brand;
+            brand = _brand;
             price = _price;
-            ManufactureDate = _manufactureDate;
+            manufactureDate = _manufactureDate;
             Color = _color;
-            isNew = _isNew;
+            IsNew = _isNew;
         }
         //Access Modifiers: private, public, internal, protected
 
         //Full Properties
-        public string BrandProperty
+        public string Brand
         {
             get
             {
-                return Brand.ToUpper();
+                return brand.ToUpper();
             }
             set
             {
-                Brand = value;
+                brand = value;
             }
         }
 
@@ -57,5 +57,26 @@ namespace NetCoreDemo
         {
             return 1;
         }
+
+        public IEnumerable<Computer> Find(string brand)
+        {
+            return null;
+        }
+
+        public IEnumerable<Computer> Find(DateTime manufactureDate)
+        {
+            return null;
+        }
+
+        public IEnumerable<Computer> Find(DateTime manufactureDate, string brand)
+        {
+            return null;
+        }
+
+        public Computer Find(int id)
+        {
+            return null;
+        }
+
     }
 }
