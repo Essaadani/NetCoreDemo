@@ -5,22 +5,18 @@ namespace NetCoreDemo
 {
     class Program
     {
-        static Computer myComputer = new Computer();
         static void Main(string[] args)
         {
-            Person person = new Person();
+            Person[] persons = new Person[3];
 
-            Programmer programmer = new Programmer();
+            persons[0] = new Programmer();
+            persons[1] = new Designer();
+            persons[2] = new Analyst();
 
-            person.Work(); // virtual
-
-            programmer.Work(); // override
-
-            person.Speak();
-            programmer.Speak();
-            // Overriding
-
-            // Hiding - Shadowing
+            foreach (Person person in persons)
+            {
+                person.Work();
+            }
         }
     }
     
