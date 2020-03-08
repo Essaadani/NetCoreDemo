@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NetCoreDemo
 {
-    class Person
+    abstract class Person
     {
         public string Name { get; set; }
         public string Address { get; set; }
@@ -16,6 +16,8 @@ namespace NetCoreDemo
             Address = address;
             Age = age;
         }
+
+        public abstract void Walk();
 
         public Person()
         {
