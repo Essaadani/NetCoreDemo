@@ -31,5 +31,9 @@ namespace NetCoreDemo
             Console.WriteLine("I Speak C#...");
         }
 
+        public override void Walk()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,5 +13,7 @@ namespace NetCoreDemo
         {
             Console.WriteLine("I am analyst");
         }
+
+        // Interface
     }
 }

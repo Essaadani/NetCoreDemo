@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NetCoreDemo
 {
-    abstract class Person
+    abstract class Person : IPerson
     {
         public string Name { get; set; }
         public string Address { get; set; }
@@ -16,8 +16,6 @@ namespace NetCoreDemo
             Address = address;
             Age = age;
         }
-
-        public abstract void Walk();
 
         public Person()
         {
@@ -31,6 +29,16 @@ namespace NetCoreDemo
         public virtual void Work()
         {
             Console.WriteLine("I Work...");
+        }
+
+        public void Walk()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetAge(DateTime dateOfBirth)
+        {
+            throw new NotImplementedException();
         }
     }
 }
